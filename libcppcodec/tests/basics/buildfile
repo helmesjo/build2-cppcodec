@@ -1,0 +1,3 @@
+import libs = libcppcodec%lib{cppcodec}
+
+exe{driver}: {hxx ixx txx cxx}{**} $libs testscript{**}

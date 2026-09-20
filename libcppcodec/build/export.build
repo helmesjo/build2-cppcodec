@@ -1,0 +1,6 @@
+$out_root/
+{
+  include cppcodec/
+}
+
+export $out_root/cppcodec/$import.target
