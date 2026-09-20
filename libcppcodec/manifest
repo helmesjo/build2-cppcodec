@@ -1,16 +1,22 @@
 : 1
 name: libcppcodec
-version: 0.1.0-a.0.z
+version: 0.2.1-a.0.z
+upstream-version: 8019b8b580f8573c33c50372baec7039dfe5a8ce
 type: lib,binless
 language: c++
-project: build2-cppcodec
-summary: Cppcodec
-license: other: proprietary ; Not free/open source.
+project: cppcodec
+topics: encoding, base64, base32
+keywords: codec base64 base32 hex rfc4648
+summary: Base64, base32, and hex encoding/decoding library
+license: MIT
 description-file: README.md
 package-description-file: PACKAGE-README.md
-url: https://example.org/upstream
-email: upstream@example.org
-package-url: https://github.com/build2-packaging/build2-cppcodec
+url: https://github.com/tplgy/cppcodec
+src-url: https://github.com/tplgy/cppcodec
+email: packaging@build2.org
+package-url: https://github.com/build2-packaging/cppcodec
 package-email: packaging@build2.org ; Mailing list.
 depends: * build2 >= 0.18.0
 depends: * bpkg >= 0.18.0
+
+requires: c++11
