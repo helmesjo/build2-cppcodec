@@ -1,5 +1,5 @@
-libs =
-#import libs += libhello%lib{hello}
+import libs  = libcppcodec%lib{cppcodec} \
+               catch2%liba{catch2wmain}
 
 exe{libcppcodec-tests}: {hxx ixx txx cxx}{**} $libs testscript
 
