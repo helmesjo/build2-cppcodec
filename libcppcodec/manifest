@@ -16,6 +16,7 @@ src-url: https://github.com/tplgy/cppcodec
 email: packaging@build2.org
 package-url: https://github.com/build2-packaging/cppcodec
 package-email: packaging@build2.org ; Mailing list.
+tests: libcppcodec-tests == $
 depends: * build2 >= 0.18.0
 depends: * bpkg >= 0.18.0
 
