@@ -1,34 +1,34 @@
-#include <sstream>
-#include <stdexcept>
-
-#include <cppcodec/cppcodec.hpp>
+#include <cppcodec/base64_rfc4648.hpp>
+#include <cppcodec/hex_lower.hpp>
 
 #undef NDEBUG
 #include <cassert>
+#include <cstdint>
+#include <string>
+#include <vector>
 
 int main ()
 {
   using namespace std;
-  using namespace cppcodec;
 
-  // Basics.
+  // base64 round-trip.
   //
   {
-    ostringstream o;
-    say_hello (o, "World");
-    assert (o.str () == "Hello, World!\n");
+    const string input ("Hello, World!");
+    const string encoded (cppcodec::base64_rfc4648::encode (input));
+    assert (encoded == "SGVsbG8sIFdvcmxkIQ==");
+
+    const vector<uint8_t> decoded (cppcodec::base64_rfc4648::decode (encoded));
+    assert (string (decoded.begin (), decoded.end ()) == input);
   }
 
-  // Empty name.
+  // hex round-trip.
   //
-  try
   {
-    ostringstream o;
-    say_hello (o, "");
-    assert (false);
-  }
-  catch (const invalid_argument& e)
-  {
-    assert (e.what () == string ("empty name"));
+    const string input ("cppcodec");
+    const string encoded (cppcodec::hex_lower::encode (input));
+
+    const vector<uint8_t> decoded (cppcodec::hex_lower::decode (encoded));
+    assert (string (decoded.begin (), decoded.end ()) == input);
   }
 }
