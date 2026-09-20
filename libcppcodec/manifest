@@ -1,6 +1,6 @@
 : 1
 name: libcppcodec
-version: 0.2.1-a.0.z
+version: 0.2.1
 upstream-version: 8019b8b580f8573c33c50372baec7039dfe5a8ce
 type: lib,binless
 language: c++
