@@ -1,0 +1,8 @@
+: 1
+name: libcppcodec-tests
+version: 0.2.1
+type: exe
+language: c++
+project: cppcodec
+summary: Base64, base32, and hex encoding/decoding library (tests)
+license: MIT
