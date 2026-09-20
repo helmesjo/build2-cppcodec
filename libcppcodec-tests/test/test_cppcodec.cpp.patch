@@ -1,0 +1,13 @@
+--- test_cppcodec.cpp.orig	2026-09-20 19:22:54
++++ test_cppcodec.cpp	2026-09-20 21:00:55
+@@ -21,8 +21,8 @@
+  *  IN THE SOFTWARE.
+  */
+ 
+-#define CATCH_CONFIG_MAIN
+-#include <catch2/catch.hpp>
++/* build2: main() is supplied by the catch2%liba{catch2wmain} library. */
++#include <catch2/catch_test_macros.hpp>
+ 
+ #include <cppcodec/base32_crockford.hpp>
+ #include <cppcodec/base32_hex.hpp>
